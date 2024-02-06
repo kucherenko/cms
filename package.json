@@ -11,9 +11,9 @@
   "devDependencies": {
     "@nuxtjs/apollo": "^5.0.0-alpha.4",
     "@nuxtjs/i18n": "^8.0.0-beta.7",
-    "@sidebase/nuxt-auth": "^0.3.0",
+    "@sidebase/nuxt-session": "^0.2.8",
     "autoprefixer": "^10.4.13",
-    "nuxt": "3.0.0",
+    "nuxt": "^3.10.1",
     "postcss": "^8.4.20",
     "sass": "^1.56.2",
     "sass-loader": "^13.2.0",
@@ -21,9 +21,11 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.6",
+    "@sidebase/nuxt-auth": "^0.6.7",
     "@vue-leaflet/vue-leaflet": "^0.8.2",
     "@vueup/vue-quill": "^1.1.0",
     "leaflet": "^1.9.3",
+    "next-auth": "4.21.1",
     "nuxt-icons": "^3.0.0",
     "vue3-easy-data-table": "^1.5.31"
   }

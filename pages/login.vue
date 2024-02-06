@@ -37,7 +37,7 @@
 <script setup>
 definePageMeta({ auth: false })
 
-const { signIn } = useSession()
+const { signIn } = useAuth()
 const email = ref('')
 const password = ref('')
 
@@ -47,7 +47,7 @@ console.log('config.public', config.public)
 const onSubmit = async () => {
   const { query } = useRoute()
   const callbackUrl = query.callbackUrl || '/'
-
+  console.log('callbackUrl', callbackUrl)
   await signIn("credentials", {
     email: email.value,
     password: password.value,

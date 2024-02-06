@@ -2,10 +2,10 @@ import { useUserStore } from '@/stores/user'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
   const config = useRuntimeConfig()
-  const { status, data } = useSession()
+  const { status, data } = await useSession()
   const user = useUserStore(nuxtApp.$pinia)
 
-  if (status.value === 'authenticated') {
+  if (status && status.value && status.value === 'authenticated') {
     const response = await fetch(config.public.userEndpoint, {
       method: 'GET',
       headers: {
